@@ -1,0 +1,15 @@
+from televisao import Televisao
+
+tv= Televisao()
+print(tv.ligada)
+tv.power()
+print(tv.ligada)
+tv.power()
+tv.canal_down()
+tv.power()
+tv.canal_up()
+tv.canal_up()
+tv.canal_up()
+tv.canal_up()
+tv.canal_down()
+tv.power()
