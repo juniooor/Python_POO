@@ -24,16 +24,26 @@ class Pedido:
         self.pedidos.pop(itens)
         return True
         
-    def mostra(self):
-        return self.pedidos
-    
+    def somar(self):   
+        return sum(self.pedidos.values())
+      
+    def detalhes(self):
+        return f"""
+                    PEDIDO NUMERO {self.id_pedido}
+                        Cliente: {self.cliente}  
+                        
+                        produto: {self.pedidos.keys()}  || {self.pedidos.values()}
+                        
+                        
+                        total: {sum(self.pedidos.values())}
+                        """ 
     
 p = Pedido(1, 'junin')
 
 p.adcionar('bolo', 6)
 p.adcionar('coxinha', 5)
 
-print(p.mostra())
-p.remover('coxinha')
-print(p.mostra())
+print(p.somar())
+print(p.detalhes())
+
 
