@@ -37,13 +37,22 @@ class Pedido:
                         
                         total: {sum(self.pedidos.values())}
                         """ 
+class SistemaDePedidos(Pedido):
+    def exibir(self):
+        return Pedido.detalhes()
     
+    
+     
 p = Pedido(1, 'junin')
+p2 = Pedido(2, 'letici')
 
 p.adcionar('bolo', 6)
 p.adcionar('coxinha', 5)
+p2.adcionar('empada', 4)
+p2.adcionar('refri', 7)
 
-print(p.somar())
-print(p.detalhes())
+ps = SistemaDePedidos()
+
+print(SistemaDePedidos.exibir(p))
 
 
